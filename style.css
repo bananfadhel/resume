@@ -1,0 +1,289 @@
+/* =======================================================
+   Banan Fadhel — Personal Resume Website
+   File: style.css
+   ======================================================= */
+
+:root{
+  --bg:#f6f7fb; --ink:#0b1220; --muted:#5b6577; --line:#e6e8ef;
+  --card:#ffffff; --accent:#2563eb; --accent-ink:#0b1533; --accent-weak:#e8eeff;
+  --radius:16px; --maxw:1000px;
+  --pill-hover:#e8eeff;
+  --pill-active:#e5edff;
+  --pill-active-border:#c8d6ff;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink)}
+main,footer{max-width:var(--maxw);margin:auto;padding:16px}
+
+h1,h2,h3{margin:0}
+h2{margin-bottom:12px;font-size:clamp(18px,2.6vw,22px);color:var(--ink)}
+h3{font-size:clamp(16px,2.2vw,20px);color:var(--accent-ink)}
+p,li{line-height:1.65}
+ul{padding-left:18px;margin:8px 0 0}
+.muted{color:var(--muted)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{position:fixed;left:16px;top:16px;z-index:1100;width:auto;height:auto;padding:10px 14px;border-radius:999px;background:var(--accent);color:#fff;outline:none}
+
+/* ============ Bootstrap Navbar Overrides ============ */
+.custom-navbar{
+  background:rgba(255,255,255,.85) !important;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  border-radius:0 0 var(--radius) var(--radius);
+  padding:8px 16px;
+  max-width:100%;
+}
+
+.nav-pill{
+  padding:8px 12px;
+  border-radius:999px !important;
+  color:var(--ink) !important;
+  border:1px solid transparent;
+  transition:background .2s ease,border-color .2s ease,transform .18s ease;
+  text-decoration:none;
+}
+.nav-pill:hover{background:var(--pill-hover);border-color:var(--line)}
+.nav-pill:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.nav-pill.active{background:var(--pill-active) !important;border-color:var(--pill-active-border);transform:translateY(-2px);color:var(--accent-ink) !important}
+
+.navbar-toggler{border-color:var(--line)}
+.navbar-toggler:focus{box-shadow:none;outline:2px solid var(--accent)}
+
+/* ============ Sections ============ */
+section{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;margin:14px 0;scroll-margin-top:92px;
+  box-shadow:0 10px 30px rgba(0,0,0,.04);transition:box-shadow .25s ease
+}
+section:hover{box-shadow:0 14px 36px rgba(0,0,0,.07)}
+
+/* ============ Hero ============ */
+.hero{
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  background:linear-gradient(135deg,#f5f0eb 0%,#ede8e3 50%,#f0ece8 100%);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px;margin-top:12px;box-shadow:0 16px 40px rgba(0,0,0,.06)
+}
+.hero .avatar{width:160px;height:160px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+.hero h1{margin:14px 0 4px;font-size:clamp(28px,5vw,40px);color:var(--accent-ink)}
+.hero .tagline{margin:0;color:var(--muted)}
+.social{display:flex;gap:12px;justify-content:center;margin-top:14px}
+.icon-btn{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;
+  border:1px solid var(--line);background:#f2f5ff;color:var(--accent-ink);
+  transition:transform .15s ease,background .2s ease,border-color .2s ease,box-shadow .2s ease;
+  text-decoration:none;
+}
+.icon-btn:hover{background:#e8eeff;border-color:#cfd9ff;transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.12);text-decoration:none}
+.icon-btn i{font-size:18px}
+
+/* ============ Timeline ============ */
+.timeline{position:relative;padding-left:16px}
+.timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline-item{position:relative;margin:0 0 16px;list-style:none}
+.timeline-item::before{display:none}
+
+/* ============ Cards / Grid ============ */
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;
+  box-shadow:0 8px 22px rgba(0,0,0,.05);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 38px rgba(0,0,0,.08);border-color:#d9e2ff}
+.grid{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+/* ============ Projects ============ */
+#projects .grid{
+  gap:16px;
+  grid-template-columns:repeat(3,1fr);
+}
+@media(max-width:900px){
+  #projects .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  #projects .grid{grid-template-columns:1fr}
+}
+
+.project-card{
+  padding:0 !important;
+  cursor:pointer;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  border-radius:14px;
+}
+
+.project-card .img-wrap{
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:#f0f2f7;
+  flex-shrink:0;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.project-card .img-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  transition:transform .4s ease;
+}
+
+.project-card:hover .img-wrap img{
+  transform:scale(1.03);
+}
+
+.project-card .card-body{
+  padding:14px 16px 16px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.project-card h3{
+  font-size:clamp(14px,1.7vw,16px);
+  margin:0 0 4px;
+  color:var(--accent-ink);
+}
+
+.project-card p.muted{
+  font-size:.875rem;
+  margin:0;
+  line-height:1.45;
+}
+
+/* ============ Bootstrap Progress Bars ============ */
+.skills-bs .progress{
+  background:#edf1ff;
+  border:1px solid var(--line);
+}
+
+/* ============ Form ============ */
+.form{display:grid;gap:12px}
+.field{display:grid;gap:6px}
+label{font-weight:600}
+input[type="text"],input[type="email"],textarea{
+  width:100%;padding:10px 12px;border:1px solid var(--line);
+  border-radius:10px;background:#fff;color:var(--ink);
+  transition:border-color .18s ease,box-shadow .18s ease
+}
+textarea{min-height:140px;resize:vertical}
+input[type="text"]:focus,input[type="email"]:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(37,99,235,.18);outline:none}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:700px){.form .row{grid-template-columns:1fr}}
+button.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 14px;border-radius:10px;border:1px solid #2553d6;
+  background:var(--accent);color:#fff;cursor:pointer;
+  box-shadow:0 6px 14px rgba(11,110,253,.18);
+  transition:transform .15s ease,box-shadow .2s ease
+}
+button.btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(11,110,253,.22)}
+button.btn-primary:active{transform:translateY(0) scale(.98)}
+.alert{margin-top:10px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);display:block}
+.alert--ok{background:#ecfdf5;border-color:#a7f3d0;color:#065f46}
+.alert--err{background:#fef2f2;border-color:#fecaca;color:#991b1b}
+.alert--loading{opacity:.8}
+
+/* ============ Footer ============ */
+footer{color:var(--muted);text-align:center;padding:24px 16px}
+
+/* ============ Two-column list ============ */
+.cols-2{columns:2;gap:20px;padding-left:18px}
+@media(max-width:600px){.cols-2{columns:1}}
+
+/* ============ Bootstrap Modal Overrides ============ */
+.custom-modal{
+  border-radius:20px;
+  overflow:hidden;
+  border:none;
+  box-shadow:0 32px 80px rgba(0,0,0,.22);
+}
+
+.custom-modal .popup-close{
+  position:absolute;top:12px;right:12px;
+  width:32px;height:32px;border-radius:50%;
+  border:none;background:rgba(0,0,0,.12);
+  color:var(--ink);font-size:14px;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  z-index:10;transition:background .2s ease;
+}
+.custom-modal .popup-close:hover{background:rgba(0,0,0,.22)}
+
+.modal-img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  background:#f0f2f7;
+}
+
+.popup-body{padding:20px}
+.popup-body h3{font-size:1.2rem;margin-bottom:4px;color:var(--accent-ink)}
+.popup-tagline{color:var(--muted);font-size:.9rem;margin:0 0 16px}
+
+.popup-cards{display:grid;gap:10px;margin-bottom:16px}
+
+.pcard{
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px 14px;
+  transition:border-color .2s;
+}
+.pcard:hover{border-color:#c8d6ff}
+
+.pcard-header{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.pcard-icon{font-size:1.2rem;line-height:1}
+.pcard-header strong{font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;color:var(--accent)}
+.pcard p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.6}
+
+.popup-meta{
+  display:flex;flex-direction:column;gap:6px;
+  padding-top:12px;border-top:1px solid var(--line);
+}
+.pmeta-item{font-size:.83rem;color:var(--muted);display:flex;align-items:flex-start;gap:6px;line-height:1.5}
+
+/* ============ Dark Mode ============ */
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#0f141a;--card:#1a212b;--ink:#e9ecf2;--muted:#b0b8c3;--line:#2c3542;
+    --accent:#4f83ff;--accent-ink:#e8ecff;--accent-weak:#1c2b47;
+    --pill-hover:#23324d;--pill-active:#1f2a44;--pill-active-border:#3a4b6b;
+  }
+  .custom-navbar{background:rgba(26,33,43,.9) !important}
+  .nav-pill{color:var(--ink) !important}
+  .nav-pill:hover{background:var(--pill-hover);border-color:var(--pill-active-border);color:#e9ecf2 !important}
+  .nav-pill.active{background:var(--pill-active) !important;border-color:var(--pill-active-border);color:#e9ecf2 !important}
+  .icon-btn{background:#22304a;color:#e9ecf2;border-color:#33425c}
+  input[type="text"],input[type="email"],textarea{background:#0f1720;color:#e9ecf2;border-color:#2c3542}
+  .skills-bs .progress{background:#1a2536}
+  .pcard{background:#141c27}
+  .project-card .img-wrap{background:#1a212b}
+  .modal-img{background:#1a212b}
+  .custom-modal{background:var(--card)}
+  .custom-modal .popup-close{background:rgba(255,255,255,.12);color:#e9ecf2}
+  .custom-modal .popup-close:hover{background:rgba(255,255,255,.22)}
+  .navbar-toggler-icon{filter:invert(1)}
+}
+
+/* ============ Print ============ */
+@media print{
+  :root{--bg:#fff;--ink:#000;--muted:#444;--line:#ddd}
+  .custom-navbar,.social,.modal{display:none!important}
+  section{break-inside:avoid;box-shadow:none}
+  a{color:inherit;text-decoration:none}
+}
