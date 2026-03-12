@@ -485,7 +485,11 @@
           : m.text;
         return '<span class="pmeta-item"><span>' + m.icon + '</span> ' + content + '</span>';
       }).join('');
-      if (!bsModal) bsModal = new bootstrap.Modal(document.getElementById('projectModal'));
+      var modalEl = document.getElementById('projectModal');
+      if (!bsModal) bsModal = new bootstrap.Modal(modalEl);
+      var imgEl = document.getElementById("popupImg");
+      imgEl.src = "";
+      setTimeout(function() { imgEl.src = p.img; }, 50);
       bsModal.show();
     }
   </script>
