@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Banan Fadhel — Resume</title>
   <meta name="description" content="Banan Wajdi Fadhel — Software Engineering undergraduate in Jeddah.">
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css">
   <meta name="color-scheme" content="light dark">
@@ -20,7 +18,7 @@
     <h1>Banan Wajdi Fadhel</h1>
     <p class="tagline">Software Engineering Undergraduate • University of Jeddah</p>
     <div class="social">
-      <a class="icon-btn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/banan-fadhel-3567772b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn">
+      <a class="icon-btn" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/banan-fadhel" aria-label="LinkedIn">
         <i class="bi bi-linkedin" aria-hidden="true"></i>
         LinkedIn
       </a>
@@ -31,7 +29,6 @@
     </div>
   </section>
 
-  <!-- Bootstrap Navbar -->
   <nav class="navbar navbar-expand-md sticky-top custom-navbar" aria-label="Primary navigation">
     <div class="container-fluid justify-content-center">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,6 +51,7 @@
 
   <main id="content">
 
+    <!-- EXPERIENCE -->
     <section id="experience" aria-labelledby="exp-title">
       <h2 id="exp-title">Work Experience</h2>
       <article class="card">
@@ -68,12 +66,13 @@
       </article>
     </section>
 
+    <!-- EDUCATION -->
     <section id="education" aria-labelledby="edu-title">
       <h2 id="edu-title">Education</h2>
       <ol class="timeline">
         <li class="timeline-item">
           <h3>University of Jeddah — B.Sc. in Software Engineering</h3>
-          <p class="muted">2022 – Present • GPA: <strong>4.63 / 5.00</strong></p>
+          <p class="muted">2022 – 2027 (Present )• GPA: <strong>4.63 / 5.00</strong></p>
           <ul>
             <li>College of Computer Science and Engineering, Jeddah, SA</li>
             <li>Relevant Courses: Web Development, Software Engineering, Data Structures, OOP</li>
@@ -83,6 +82,7 @@
       </ol>
     </section>
 
+    <!-- CERTIFICATES -->
     <section id="certs" aria-labelledby="certs-title">
       <h2 id="certs-title">Courses &amp; Certificates</h2>
       <ul class="cols-2">
@@ -97,17 +97,18 @@
       </ul>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" aria-labelledby="proj-title">
       <h2 id="proj-title">Projects</h2>
       <div class="grid">
 
-        <article class="card project-card" onclick="openProject('library')">
+        <article class="card project-card" onclick="openProject('ujodus')">
           <div class="img-wrap">
-            <img src="assets/libraryapp.jpg" alt="Library App">
+            <img src="assets/ujouds.jpg" alt="UJ ODUS App">
           </div>
           <div class="card-body">
-            <h3>Library App</h3>
-            <p class="muted">Library management system</p>
+            <h3>UJ ODUS App</h3>
+            <p class="muted">HCI mobile app redesign</p>
           </div>
         </article>
 
@@ -131,16 +132,6 @@
           </div>
         </article>
 
-        <article class="card project-card" onclick="openProject('smartlab')">
-          <div class="img-wrap">
-            <img src="assets/smartlab.jpg" alt="Smart Lab System">
-          </div>
-          <div class="card-body">
-            <h3>Smart Lab System</h3>
-            <p class="muted">IoT smart lab system</p>
-          </div>
-        </article>
-
         <article class="card project-card" onclick="openProject('medication')">
           <div class="img-wrap">
             <img src="assets/medicationapp.jpg" alt="Medication Reminder">
@@ -148,6 +139,16 @@
           <div class="card-body">
             <h3>Medication Reminder App</h3>
             <p class="muted">Java desktop application</p>
+          </div>
+        </article>
+
+        <article class="card project-card" onclick="openProject('smartlab')">
+          <div class="img-wrap">
+            <img src="assets/smartlab.jpg" alt="Smart Lab System">
+          </div>
+          <div class="card-body">
+            <h3>Smart Lab System</h3>
+            <p class="muted">IoT smart lab system</p>
           </div>
         </article>
 
@@ -161,13 +162,13 @@
           </div>
         </article>
 
-        <article class="card project-card" onclick="openProject('ujodus')">
+        <article class="card project-card" onclick="openProject('library')">
           <div class="img-wrap">
-            <img src="assets/ujouds.jpg" alt="UJ ODUS App">
+            <img src="assets/libraryapp.jpg" alt="Library App">
           </div>
           <div class="card-body">
-            <h3>UJ ODUS App</h3>
-            <p class="muted">HCI mobile app redesign</p>
+            <h3>Library App</h3>
+            <p class="muted">Library management system</p>
           </div>
         </article>
 
@@ -184,6 +185,7 @@
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" aria-labelledby="skills-title">
       <h2 id="skills-title">Skills</h2>
       <div class="grid">
@@ -211,7 +213,6 @@
         </div>
       </div>
 
-      <!-- Bootstrap Progress Bars for Programming Languages -->
       <div class="card" style="margin-top:12px">
         <h3>Programming Languages</h3>
         <div class="skills-bs mt-3">
@@ -267,6 +268,7 @@
       </div>
     </section>
 
+    <!-- VOLUNTEER -->
     <section id="volunteer" aria-labelledby="vol-title">
       <h2 id="vol-title">Volunteer</h2>
       <ul>
@@ -275,6 +277,7 @@
       </ul>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact Me</h2>
       <form id="contactForm" class="form" aria-label="Contact form" novalidate>
@@ -304,14 +307,17 @@
     <small>&copy; <span id="year"></span> Banan Wajdi Fadhel</small>
   </footer>
 
-  <!-- PROJECT POPUP (Bootstrap Modal) -->
-  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="popupTitle" aria-hidden="true">
+  <!-- PROJECT MODAL -->
+  <!-- FIX 1: Added role="dialog" to resolve aria-labelledby validation error -->
+  <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="popupTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content custom-modal">
         <button type="button" class="popup-close" data-bs-dismiss="modal" aria-label="Close">&#10005;</button>
-        <img id="popupImg" src="" alt="" class="modal-img">
+        <!-- FIX 2: src must be non-empty — using a transparent placeholder -->
+        <img id="popupImg" src="assets/placeholder.jpg" alt="Project image" class="modal-img">
         <div class="popup-body">
-          <h3 id="popupTitle"></h3>
+          <!-- FIX 3: h3 heading must not be empty -->
+          <h3 id="popupTitle">Project Details</h3>
           <p id="popupTagline" class="popup-tagline"></p>
           <div id="popupCards" class="popup-cards"></div>
           <div id="popupMeta" class="popup-meta"></div>
@@ -320,10 +326,10 @@
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // Active nav link on scroll
@@ -353,14 +359,26 @@
         var message = document.getElementById('message').value.trim();
         if (!name || !email || !message) { showMsg("Please fill in all fields.", false); return; }
         if (document.getElementById('botcheck').checked) return;
-        var payload = { access_key: ACCESS_KEY, subject: "New message from Banan's resume", from_name: name, reply_to: email, message: message };
+        var payload = {
+          access_key: ACCESS_KEY,
+          subject: "New message from Banan's resume",
+          from_name: name,
+          reply_to: email,
+          message: message
+        };
         try {
           showMsg("Sending\u2026", true, true);
-          var res = await fetch("https://api.web3forms.com/submit", { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) });
+          var res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify(payload)
+          });
           var data = await res.json();
           if (data.success) { form.reset(); showMsg("\u2705 Message sent successfully. Thank you!", true); }
           else { showMsg("\u274c Failed to send. " + (data.message || "Please try again."), false); }
-        } catch (err) { showMsg("\u274c Network error. Please try again.", false); }
+        } catch (err) {
+          showMsg("\u274c Network error. Please try again.", false);
+        }
       });
       function showMsg(text, ok, loading) {
         alertBox.hidden = false;
@@ -369,55 +387,72 @@
       }
     })();
 
+    // Projects data
     var projects = {
+
       library: {
         img: "assets/libraryapp.jpg",
-        title: "Jeddah University E-Library App",
-        tagline: "Mobile library management system — CCSW-223",
+        title: "Jeddah University E-Library Application",
+        tagline: "Smart library system for book search, reservation, and availability tracking",
         cards: [
-          { icon: "🔍", label: "Problem", text: "Students wasted time traveling across campus only to find books unavailable or the library closed for maintenance." },
-          { icon: "✨", label: "Key Features", text: "Search books by title/author/category • Reserve books in advance • Real-time availability & library hours • Due date notifications • Accessibility support for students with disabilities" },
-          { icon: "🛠", label: "Methods Used", text: "Use Case Diagrams • Sequence Diagrams • Class Diagrams • Agile Planning • Requirements Engineering" }
-        ],
-        meta: []
-      },
-      bonita: {
-        img: "assets/bonitatouch.jpg",
-        title: "Bonita Touch",
-        tagline: "Online beauty salon booking website",
-        cards: [
-          { icon: "💡", label: "Overview", text: "A beauty salon booking website that allows users to schedule appointments online, choose services, and manage their bookings with ease." },
-          { icon: "✨", label: "Key Features", text: "Online appointment scheduling • Service selection & browsing • Booking management • User-friendly interface" },
-          { icon: "🛠", label: "Tech Stack", text: "HTML • CSS • JavaScript • Node.js • Full-Stack Development" }
+          { icon: "🔍", label: "Problem", text: "Students often travel across campus to the university library only to discover that the book they need is unavailable or the library is closed. This results in wasted time and inefficient access to learning resources." },
+          { icon: "💡", label: "Solution", text: "Designed a digital library application that allows students to search for books, check real-time availability, and reserve books in advance before visiting the library." },
+          { icon: "✨", label: "Key Features", text: "Book search by title, author, or category • Book reservation system • Real-time availability updates • Notifications for due dates • Accessibility features for students with disabilities." },
+          { icon: "🧰", label: "System Design", text: "Use Case Modeling • Sequence Diagrams • Class Diagrams • Requirements Analysis • Software Engineering Development Process." }
         ],
         meta: [
-          { icon: "🔗", text: "GitHub Repository", link: "https://github.com/bananfadhel/salon-web" }
-        ] 
-      },
-      binary: {
-        title: "4-Bit Binary Synchronous Counter",
-        tagline: "Digital Logic Design — counts 0–15 using T Flip-Flops & LEDs",
-        cards: [
-          { icon: "⚡", label: "How It Works", text: "Uses JK Flip-Flops and AND gates to build a synchronous counter. Counts from 0000 to 1111 (0–15) then resets. 4 LEDs represent each binary bit in real time." },
-          { icon: "🔧", label: "Components", text: "2×2 JK Flip-Flops (74HC73) • 1×2 AND Gate (74HC08) • 4 LEDs (Blue, Green, Yellow, Red) • DIP Switch ×4 • Power Supply • Function Generator" },
-          { icon: "📐", label: "Logic Equations", text: "T0 = 1 • T1 = Q0 • T2 = Q0 AND Q1 • T3 = Q0 AND Q1 AND Q2" }
-        ],
-        meta: [
-          { icon: "🔗", text: "Tinkercad Simulation", link: "https://www.tinkercad.com/things/iNdLJ5iYraY-copy-of-project-4-bits-dld?sharecode=HOzmhHG1mnm3Frog0ebuCAbzbLthb-GZEyfW9Igushg" },
-          { icon: "📚", text: "Digital Logic Design Course" }
+          { icon: "🏫", text: "Software Engineering Academic Project – University of Jeddah" }
         ]
       },
+
+      bonita: {
+        img: "assets/bonitatouch.jpg",
+        title: "Bonita Touch – Salon Booking Web Application",
+        tagline: "Full-stack appointment booking system for beauty salons",
+        cards: [
+          { icon: "🔍", label: "Problem", text: "Traditional salon bookings rely on phone calls or walk-ins, which often leads to scheduling conflicts, double bookings, and long waiting times for clients." },
+          { icon: "💡", label: "Solution", text: "Developed a web-based booking system that allows customers to schedule appointments online while enabling salon staff and administrators to manage bookings through a centralized dashboard." },
+          { icon: "✨", label: "Key Features", text: "Online appointment booking • Service and staff selection • Date & time slot scheduling • Appointment editing and cancellation • Staff dashboard for managing bookings • Admin control panel." },
+          { icon: "🧰", label: "Technologies", text: "HTML • CSS • JavaScript • Node.js • SQLite • Agile (Scrum) Development • GitHub Version Control" }
+        ],
+        meta: [
+          { icon: "🌐", text: "Full-Stack Web Development Project" },
+          { icon: "🐙", text: "View on GitHub", link: "https://github.com/bananfadhel/salon-web" }
+        ]
+      },
+
+      binary: {
+        img: "assets/4bitbinary.jpg",
+        title: "4-Bit Binary Synchronous Counter",
+        tagline: "Digital Logic circuit that counts from 0–15 using flip-flops",
+        cards: [
+          { icon: "🔍", label: "Concept", text: "Designed a synchronous binary counter capable of counting from 0000 to 1111 (0–15) using flip-flops and logic gates synchronized by a clock signal." },
+          { icon: "⚙️", label: "How It Works", text: "Each flip-flop toggles according to specific logic conditions. The system increments the binary output on each clock pulse until reaching 1111 before resetting to 0000." },
+          { icon: "🔧", label: "Components", text: "JK Flip-Flops (74HC73) • AND Gate (74HC08) • LEDs for binary output display • DIP Switch • Power Supply • Function Generator." },
+          { icon: "📐", label: "Logic Design", text: "T0 = 1 • T1 = Q0 • T2 = Q0 AND Q1 • T3 = Q0 AND Q1 AND Q2." }
+        ],
+        meta: [
+          { icon: "🧠", text: "Digital Logic Design Project" },
+          { icon: "🔢", text: "Counts Binary Values from 0 → 15" },
+          { icon: "🔗", text: "View on TinkerCad", link: "https://www.tinkercad.com/things/iNdLJ5iYraY-copy-of-project-4-bits-dld?sharecode=HOzmhHG1mnm3Frog0ebuCAbzbLthb-GZEyfW9Igushg" }
+        ]
+      },
+
       smartlab: {
         img: "assets/smartlab.jpg",
-        title: "SmartLab System",
-        tagline: "IoT smart laboratory — automates energy & security via occupancy detection",
+        title: "SmartLab – IoT Laboratory Automation",
+        tagline: "ESP32-based system for smart energy management and lab security",
         cards: [
-          { icon: "🔍", label: "Problem", text: "University labs waste energy because lights and computers stay on when empty, and unlocked labs create security risks." },
-          { icon: "⚡", label: "How It Works", text: "PIR sensors detect occupancy → lights, computers & door access turn on. After inactivity → system powers off devices, locks door & sends cloud notification via Blynk." },
-          { icon: "🔧", label: "Components", text: "ESP32 Controller • PIR Motion Sensors • Relay Module (Lights, Computers, Door Lock) • Status LEDs • Blynk Cloud App" }
+          { icon: "🔍", label: "Problem", text: "University computer labs often waste electricity because lights and computers remain active even when the lab is empty. In addition, unlocked laboratories can create security risks." },
+          { icon: "💡", label: "Solution", text: "Developed an IoT-based smart laboratory system that automatically detects occupancy and manages lab devices such as lights, computers, and door locks to improve energy efficiency and security." },
+          { icon: "⚙️", label: "System Functionality", text: "Two PIR motion sensors detect lab occupancy and send signals to an ESP32 microcontroller. The controller activates relays to manage lighting, computer power, and door locks. If no activity is detected, the system powers off devices and secures the lab automatically." },
+          { icon: "🧰", label: "Technologies", text: "ESP32 • PIR Motion Sensors • Relay Modules • Blynk IoT Platform • Arduino (C/C++) • WiFi-based monitoring" }
         ],
-        meta: []
+        meta: [
+          { icon: "🏫", text: "IoT Academic Project – University of Jeddah" }
+        ]
       },
+
       medication: {
         img: "assets/medicationapp.jpg",
         title: "Medication Reminder App",
@@ -427,59 +462,75 @@
           { icon: "✨", label: "Key Features", text: "Add & manage medications • Set custom reminders • Track medication history • Simple Swing-based UI" },
           { icon: "🛠", label: "Tech Stack", text: "Java • Java Swing • OOP Design Principles" }
         ],
-        meta: []
+        meta: [
+          { icon: "🐙", text: "View on GitHub", link: "https://github.com/bananfadhel/Pills-Reminder-App" }
+        ]
       },
+
       closet: {
         img: "assets/virtualcloset.jpg",
-        title: "Virtual Closet",
-        tagline: "AI-powered wardrobe management app — iOS & Android",
+        title: "Virtual Closet – AI Wardrobe Management App",
+        tagline: "AI-powered mobile app for organizing wardrobes and recommending outfits",
         cards: [
-          { icon: "🔍", label: "Problem", text: "People waste ~17 min/day choosing outfits, make duplicate purchases, and only regularly use 20% of their wardrobe." },
-          { icon: "✨", label: "Key Features", text: "Photo-based clothing upload • Auto-sync from online shopping • Duplicate item detection & alerts • AI outfit suggestions based on weather & existing wardrobe" },
-          { icon: "📊", label: "Business Case", text: "Budget: $365K • NPV: $189,542 • ROI: 105% • Payback: 2.5 years • Timeline: 8 months" }
+          { icon: "🔍", label: "Problem", text: "People often struggle with disorganized wardrobes, duplicate purchases, and spending time deciding what to wear." },
+          { icon: "💡", label: "Solution", text: "Developed a mobile application that digitizes personal wardrobes by allowing users to upload clothing photos, automatically sync online purchases, and receive AI-powered outfit recommendations." },
+          { icon: "✨", label: "Key Features", text: "Photo-based clothing upload • Duplicate item detection • Automatic e-commerce purchase syncing • AI outfit suggestions based on wardrobe and weather." },
+          { icon: "🧰", label: "Technologies", text: "Mobile App Design • Machine Learning Concepts • Cloud Storage • API Integration." }
         ],
         meta: [
-          { icon: "🛠", text: "Cross-platform • ML • E-commerce API Integration" }
+          { icon: "📊", text: "Investment: $365K" },
+          { icon: "📈", text: "ROI: 105%" },
+          { icon: "💰", text: "NPV: $189,542" },
+          { icon: "⏱", text: "Payback Period: 2.4 Years" }
         ]
       },
+
       ujodus: {
         img: "assets/ujouds.jpg",
-        title: "UJ ODUS App – Seamless User Experience",
-        tagline: "HCI mobile app redesign — University of Jeddah",
+        title: "UJ ODUS Mobile App – UX Redesign",
+        tagline: "HCI project focused on redesigning the ODUS student system",
         cards: [
-          { icon: "🔍", label: "Problem", text: "The existing web-based ODUS system had slow performance under high traffic, repeated login requirements, and an outdated interface that made it difficult for students to navigate academic services." },
-          { icon: "✨", label: "Key Features", text: "Seamless login (no repeated username/password) • Centralized student dashboard • Smart course registration & attendance tracking • Integrated AI chatbot (Odus Assistant) • Modern & user-friendly interface • High traffic stability" },
-          { icon: "🛠", label: "Methods Used", text: "Designed using Figma • High-fidelity prototyping • Feedback collected via questionnaire • Iterative design process based on user needs • HCI principles applied" }
+          { icon: "🔍", label: "Problem", text: "The existing ODUS web system had usability issues including slow performance during peak registration periods, repeated login requirements, and a complex interface that made it difficult for students to navigate academic services." },
+          { icon: "💡", label: "Solution", text: "Redesigned the ODUS system as a mobile application with a clean and modern interface, improving accessibility, navigation, and overall user experience for students." },
+          { icon: "✨", label: "Key Features", text: "Centralized student dashboard • Faster course registration • Attendance tracking • Integrated AI chatbot (Odus Assistant) • Seamless login experience without repeated authentication." },
+          { icon: "🛠", label: "Design Process", text: "High-fidelity prototypes created using Figma • User feedback collected through questionnaires • Iterative design improvements based on HCI principles and student needs." }
         ],
         meta: [
-          { icon: "🔗", text: "Figma Prototype", link: "https://www.figma.com/proto/wQahqekynBvz9BcDtBA9cb/Untitled?t=RHPjmKr0nc1f8Nlk-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=11-342&starting-point-node-id=11%3A258" }
+          { icon: "🎨", text: "UX/UI Design – Figma Prototype", link: "https://www.figma.com/proto/wQahqekynBvz9BcDtBA9cb/Untitled?t=RHPjmKr0nc1f8Nlk-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=11-342&starting-point-node-id=11%3A258" },
+          { icon: "🧠", text: "Human-Computer Interaction Project" }
         ]
       },
+
       supermarket: {
         img: "assets/supermarket.jpg",
-        title: "Supermarket Database System",
-        tagline: "Relational database system for supermarket operations",
+        title: "Supermarket Database Management System",
+        tagline: "Relational database system for managing products, sales, customers, and suppliers",
         cards: [
-          { icon: "💡", label: "Overview", text: "A database management system designed to handle supermarket products, sales transactions, and inventory tracking." },
-          { icon: "✨", label: "Key Features", text: "Product catalog management • Sales transaction tracking • Inventory control • ER diagram design • SQL queries & reporting" },
-          { icon: "🛠", label: "Tech Stack", text: "SQL • Database Design • ER Diagrams • Relational Modeling" }
+          { icon: "💡", label: "Overview", text: "Designed and implemented a relational database system to manage supermarket operations including products, sales transactions, customers, suppliers, and inventory tracking." },
+          { icon: "📊", label: "Database Design", text: "Developed a complete database structure including ER diagrams, relational schema design, and normalization up to Third Normal Form (3NF) to ensure data consistency and reduce redundancy." },
+          { icon: "⚙️", label: "System Features", text: "Product catalog management • Supplier management • Customer records • Sales transaction tracking • Inventory monitoring and reporting." },
+          { icon: "🧰", label: "Technologies", text: "SQL • Relational Database Design • ER Diagrams • Normalization (1NF, 2NF, 3NF)" }
         ],
-        meta: []
+        meta: [
+          { icon: "🏫", text: "Database Systems Academic Project – University of Jeddah" }
+        ]
       }
+
     };
 
+    // Project modal
     var bsModal;
     function openProject(key) {
       var p = projects[key];
       if (!p) return;
-      document.getElementById("popupImg").src = p.img;
+      document.getElementById("popupImg").src = "assets/placeholder.jpg";
       document.getElementById("popupImg").alt = p.title;
       document.getElementById("popupTitle").textContent = p.title;
       document.getElementById("popupTagline").textContent = p.tagline;
-      document.getElementById("popupCards").innerHTML = p.cards.map(function(c) {
+      document.getElementById("popupCards").innerHTML = p.cards.map(function (c) {
         return '<div class="pcard"><div class="pcard-header"><span class="pcard-icon">' + c.icon + '</span><strong>' + c.label + '</strong></div><p>' + c.text + '</p></div>';
       }).join('');
-      document.getElementById("popupMeta").innerHTML = p.meta.map(function(m) {
+      document.getElementById("popupMeta").innerHTML = p.meta.map(function (m) {
         var content = m.link
           ? '<a href="' + m.link + '" target="_blank" rel="noopener noreferrer">' + m.text + '</a>'
           : m.text;
@@ -487,9 +538,9 @@
       }).join('');
       var modalEl = document.getElementById('projectModal');
       if (!bsModal) bsModal = new bootstrap.Modal(modalEl);
-      var imgEl = document.getElementById("popupImg");
-      imgEl.src = "";
-      setTimeout(function() { imgEl.src = p.img; }, 50);
+      var preload = new Image();
+      preload.onload = function () { document.getElementById("popupImg").src = preload.src; };
+      preload.src = p.img;
       bsModal.show();
     }
   </script>
